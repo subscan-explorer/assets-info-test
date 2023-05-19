@@ -21,7 +21,8 @@ jobs:
           labels: Waiting Signature Verifier
       - uses: actions/checkout@v3
         with:
-          ref: ${{ github.head_ref }}
+         ref: ${{ github.event.pull_request.head.ref }}
+         repository: ${{ github.event.pull_request.head.repo.full_name }}
       - name: Get changed files
         id: changed-files
         uses: tj-actions/changed-files@v35
