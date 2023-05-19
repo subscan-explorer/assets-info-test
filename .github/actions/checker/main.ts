@@ -184,9 +184,9 @@ const main = async () => {
     if (!file.startsWith("assets/") || !file.endsWith(".json")) {
       continue;
     }
-    console.log("file", __dirname + "/../../../" + file);
-    if (!fs.existsSync(__dirname + "/../../../" + file)) {
-      console.log("file not existed", );  
+    console.log("/home/runner/work/assets-info-test/assets-info-test/assets/" + file + "name");
+    if (!fs.existsSync("/home/runner/work/assets-info-test/assets-info-test/assets/" + file)) {
+      console.log("file not existed", "/home/runner/work/assets-info-test/assets-info-test/assets");  
     }
     
   }
