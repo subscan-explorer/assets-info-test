@@ -28,7 +28,9 @@ jobs:
         with:
           base_sha: ${{ github.event.pull_request.base.sha }}
           sha: ${{ github.event.pull_request.head.sha }}
-
+      - name: ls
+        run: |
+          cd assets && ls -lh
       - name: Check signature
         uses: ./.github/actions/checker
         if: success()
