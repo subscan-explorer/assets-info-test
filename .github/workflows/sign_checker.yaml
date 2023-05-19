@@ -30,7 +30,7 @@ jobs:
           sha: ${{ github.event.pull_request.head.sha }}
       - name: ls
         run: |
-          cd assets && ls -lh
+          cd assets && ls -lh && echo "end"
       - name: Check signature
         uses: ./.github/actions/checker
         if: success()
