@@ -34,10 +34,8 @@ jobs:
         with:
          ref: ${{ github.event.pull_request.head.ref }}
          repository: ${{ github.event.pull_request.head.repo.full_name }}
-
       - name: ls-checout
         run: cd ./assets && ls -lh
-
       - name: Check signature
         uses: ./.github/actions/checker
         if: success()

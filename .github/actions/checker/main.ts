@@ -180,6 +180,16 @@ const main = async () => {
     console.log("changes not found");
     return;
   }
+  for (const file of changes) {
+    if (!file.startsWith("assets/") || !file.endsWith(".json")) {
+      continue;
+    }
+    console.log("/home/runner/work/assets-info-test/assets-info-test/assets/" + file + "name");
+    if (!fs.existsSync("/home/runner/work/assets-info-test/assets-info-test/assets/" + file)) {
+      console.log("file not existed", "/home/runner/work/assets-info-test/assets-info-test/assets");  
+    }
+    
+  }
 
   const prSha = process.env.INPUT_SHA;
   const prNum = process.env.INPUT_NUM ? Number(process.env.INPUT_NUM) : 0;
